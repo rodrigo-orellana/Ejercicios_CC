@@ -21,13 +21,17 @@ logging.basicConfig(filename='app.log', filemode='a',
 # return "Hola Mundo !! :)
 
 # Si se trata de una prueba de travis debe de hacerlo en local
+
 if('TRAVIS' in os.environ):
+    print('TRAVIS')
     mongo = BaseDatos("mongodb://127.0.0.1:27017/MiBaseDatos", True)
 elif('MLAB' in os.environ):
+    print('MLAB')
     mongo = BaseDatos("mongodb://AlejandroCC:" + os.environ.get('MLABPASS') +
                       "@ds026018.mlab.com:26018/jugadores", True)
 else:
-    mongo = BaseDatos("mongodb://10.0.0.5:27017/MiBaseDatos", False)
+    print('else')
+    mongo = BaseDatos("mongodb://127.0.0.1:27017/MiBaseDatos", False)
 
 # recursos = {"jugador1":j1.__dict__(),
 #            "jugador2":j2.__dict__(),
@@ -103,6 +107,6 @@ api.add_resource(JugadorIndividual, '/jugadores/<string:ruta>')
 if (__name__ == '__main__'):
     # Esto es para que pueda abrirse desde cualquier puerto y
     #  direccion(de esta forma en heroku no nos da error).
-    port = int(os.environ.get("PORT", 80))
+    port = int(os.environ.get("PORT", 8000))
     app.run(host="0.0.0.0", port=port, debug=False)
     # app.run(debug=True)
