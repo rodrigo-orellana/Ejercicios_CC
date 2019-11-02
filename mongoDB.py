@@ -18,6 +18,7 @@ class BaseDatos:
             self.jugadores = db.jugadores
         else:
             self.jugadores = db.prueba
+            self.jugadores = db.jugadores
         logging.info("MONGO:Conexión completada con éxito.")
 
     def getJugador(self, jugador_nick):

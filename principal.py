@@ -27,11 +27,14 @@ if('TRAVIS' in os.environ):
     mongo = BaseDatos("mongodb://127.0.0.1:27017/MiBaseDatos", True)
 elif('MLAB' in os.environ):
     print('MLAB')
+    # rodrigoesteban/r0k4FCFHDNGJKnlh
     mongo = BaseDatos("mongodb://AlejandroCC:" + os.environ.get('MLABPASS') +
                       "@ds026018.mlab.com:26018/jugadores", True)
 else:
     print('else')
-    mongo = BaseDatos("mongodb://127.0.0.1:27017/MiBaseDatos", False)
+    #mongo = BaseDatos("mongodb://127.0.0.1:27017/MiBaseDatos", False)
+    mongo = BaseDatos(
+        "mongodb+srv://rodrigoesteban:r0k4FCFHDNGJKnlh@cluster0-qazzt.mongodb.net/sample_airbnb?retryWrites=true&w=majority", False)
 
 # recursos = {"jugador1":j1.__dict__(),
 #            "jugador2":j2.__dict__(),
