@@ -15,3 +15,4 @@ Con el siguiente comando creamos un package.json por defecto
 **Ejercicio 3**  
 Descargar el repositorio de ejemplo anterior, instalar las herramientas necesarias (principalmente Scala y sbt) y ejecutar el ejemplo desde sbt. Alternativamente, buscar otros marcos para REST en Scala tales como Finatra o Scalatra y probar los ejemplos que se incluyan en el repositorio.  
 ![eje2.4](img/2.4.png "2.4")  
+
