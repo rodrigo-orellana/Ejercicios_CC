@@ -17,4 +17,4 @@ scenarios:
 ~~~  
 Ejecución:  
 ![eje6.1](img/6.1.png "6.1")  
-![eje6.2](img/6.1.png "6.2")  
+![eje6.2](img/6.2.png "6.2")  
