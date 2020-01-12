@@ -1,0 +1,4 @@
+app: 
+  host: 104.196.9.185
+  user: one_user
+sudo: True
