@@ -48,6 +48,29 @@ ansible all -u jjmerelo -m ping
       apt:
         pkg: ['curl', 'build-essential', 'libssl-dev', 'nodejs', 'npm']
 ~~~  
+https://www.youtube.com/watch?v=PmOMc4zfCSw
+https://app.vagrantup.com/boxes/search
+vagrant box add  ubuntu/trusty64
+
+    vagrant init ubuntu/trusty64
+    ls -ltr
+    vagrant up
+    sudo apt-get update
+    ->install git and clone
+    ->
+vi Vagrantfile
+# Create a private network, which allows host-only access to the machine
+  # using a specific IP.
+  config.vm.network "private_network", ip: "100.100.100.100"
+
+vagrant reload
+
+![vagrant](img/vagrant.png "ansivagrantble")  
+![vagrant](img/vagrant_ssh.png "ansivagrantble")  
+![vagrant](img/vagrant_up.png "ansivagrantble")  
+![vagrant](img/webserver_nginx.png "ansivagrantble")  
+![vagrant](img/viertual_machine_webserver.png "ansivagrantble")  
+
 
 
 **Ejercicio3.-** Crear un rol common que haga ciertas tareas comunes que vayamos a usar en todas las máquinas virtuales de los microservicios de la asignatura (o, para el caso, cualquier otra asignatura).
