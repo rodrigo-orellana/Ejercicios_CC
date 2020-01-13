@@ -71,6 +71,26 @@ vagrant reload
 ![vagrant](img/webserver_nginx.png "ansivagrantble")  
 ![vagrant](img/viertual_machine_webserver.png "ansivagrantble")  
 
+¿Agregar una URL? editar /etc/hosts
+
+Ansible es un manager system configuratior, maintained by red hat, open source, install on control machine. posee acceso ssh a host administrados
+
+
+SSH Relación de confianza
+  ssh-keygen
+  ssh-copy-id vagrant@100.100.100.100  (indicar password vagrant)
+
+
+apt-add-repository ppa:ansible/ansible
+apt-get update
+apt-get install ansible
+ansible --version
+  ansible 2.9.2
+cp -R /etc/ansible/ .
+
+![ansible](img/ssh-copy-id.png "ansible")  
+![ansible](img/ssh-keygen.png "ansible")  
+![ansible](ansible_ping.png "ansible")  
 
 
 **Ejercicio3.-** Crear un rol common que haga ciertas tareas comunes que vayamos a usar en todas las máquinas virtuales de los microservicios de la asignatura (o, para el caso, cualquier otra asignatura).
